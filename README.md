@@ -14,4 +14,7 @@ It was made about two years ago with a neighbor and dedicated to our dogs Pancho
 ## Other thing I can do is share a photo of mine so everyone can see how cool I am
 
 - Damn it! first I should push a photo to github in order to have an url 
-to fit in the file XD 
+to fit in the file XD
+
+- Well I think I have solved ![it](https://github.com/ehdinayan/Week4-Study-Journal/blob/master/Curri.jpg)
+ 
