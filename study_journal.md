@@ -78,6 +78,17 @@ git commit -m "added two files"
 In order to avoid and erase last changes and commits we can type
 `git reset --soft HEAD~`
 
+# Entry 2 Tuesday June 22 2021
+
+# SUMMARY
+
+- Git follows changes to plain text files ( code, text ).
+- A directory in wich changes are staged by Git is called a Git repo.
+- To stablish a new Git repo we should type git init in desired directory.
+- Changes to filles are followed by `git add [filename]` command.
+- We create milestones of our files state with command `git commit -m "comment about changes"`
+- To see the state of files in directory we use `git status` command.
+
 
 
 
