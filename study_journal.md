@@ -1,8 +1,8 @@
-## WEEK 4 
+# WEEK 4 
 
-# Entry 1 Tuesday June 15 2021
+## Entry 1 Tuesday June 15 2021
 
-# What are Git and GitHub?
+## What are Git and GitHub?
 
 Git is a command line program wich allow us tracking versions of code and 
 text files of our own.
@@ -18,7 +18,7 @@ to them trhough the internet. Public repositories are free, private not.
 There is also a social aspect in the fact that we can see how others 
 develop their code, and interact with their development.
 
-# Preparing Git and GitHub
+## Preparing Git and GitHub
 
 We have first to create an account in the GitHub website with user name
 and password.
@@ -80,14 +80,62 @@ In order to avoid and erase last changes and commits we can type
 
 # Entry 2 Tuesday June 22 2021
 
-# SUMMARY
+## SUMMARY
 
 - Git follows changes to plain text files ( code, text ).
 - A directory in wich changes are staged by Git is called a Git repo.
-- To stablish a new Git repo we should type git init in desired directory.
+- To stablish a new Git repo we should type `git init` in desired directory.
 - Changes to filles are followed by `git add [filename]` command.
 - We create milestones of our files state with command `git commit -m "comment about changes"`
 - To see the state of files in directory we use `git status` command.
+- We can see a list of commits of repo by typing `git log`.
+
+# WEEK 4 Important Git features
+
+## Help, Logs and Diffs
+
+We should be able to get help about any Git command by typing `git help [name of command]
+Also, Git can help showing us differences between non followed changes (unstaged) of our files and the last commit.
+
+For example, if we add a line to a file but before do add or commit we type:
+
+`git diff [file]`
+
+We'll get an interesting view from git showing us in red the "before changes state" and in green "new state" in a line by line way wich is very useful.
+
+At this point, if we want to get back the file to its "before changes state", we can do this by:
+
+`git checkout [file]` command.
+
+## Ignoring files
+
+It is possible that we don't want a few files to be ever staged by Git, like binaries produced by code execution (pdf, images...).
+A file in our Git repo called .gitignore can be used in order to add filetypes
+that we don't want git to follow. We can do this using regular expressions, for example, that can also be understand by `ls` command.
+
+Let's soupose that we have a .jpg file we don't want Git to follow. So we'll be using regular expressions to create .gitignore file 
+and be sure Git won't be seeing those kind of files anymore, even if those files are, in fact, in our Git repo but not being staged:
+
+```
+echo "*.jpg" > .gitignore
+```
+
+After that Git won't show a .jpg file without staging anymore. But first we should add and commit our new .gitignore file in order to git start using it:
+
+```
+git add .gitignore
+git commit -m "added gitignore file"
+```
+After that we can be sure any other jpg file won't be detected by Git.
+
+`ls` command will show us if it is working.
+
+## SUMMARY
+
+- `git help` allow us read Git man pages.
+- `git log` show us commit history.
+- `git diff` show differences between last commit and recent changes not being staged yet.
+- We can create a `.gitignore` file to add files we don't want to be detected by Git. 
 
 
 
