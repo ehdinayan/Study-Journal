@@ -137,6 +137,69 @@ After that we can be sure any other jpg file won't be detected by Git.
 - `git diff` show differences between last commit and recent changes not being staged yet.
 - We can create a `.gitignore` file to add files we don't want to be detected by Git. 
 
+# WEEK 4 Branching, part 1
 
+Branching is one of the most powerfull Git features. We can see branches at the moment by the `git branch` command.
+We'll see the branch we are in marked with a (*) sign.
+There is always a default branch in a Git repo, wich is named master. This is usually used as the "stable" version of code or whatever we are working in.
+We can then develop new implementations in other branches that need kind of testing.
 
+To add a new branch to our repo we should use `git branch [branch name]`
+After that if we type again `git branch`, we'll see two branches instead of one.
+`git status` also show us the branch we are in at the moment.
+
+To erase a branch we can do it easily by typing `git branch -d [branch name]` command.
+To change between branches, we use the `git checkout [branch name]` command.
+
+If we want to create a new branch and at the same time change to it, we can do with `git checkout -b [branch name]` command.
+
+It is important to note that when we create a new branch all files in master are also by default in the new branch, but if we do changes to a file in 
+the new one this will not affect the same file in the master branch, even if we have added and commited new changes.
+
+# Branching, part 2
+
+The branching main idea is to be able to do "incremental changes" to plain text files ( usually code ), without affecting the master branch
+or any other.
+
+If we have made some changes to a file in new branch we should combine them with the file in master branch in order to take our work one step further.
+This process is called "merge". Merge allow us to ellegantly combine changes between 2 different branches.
+
+To do so, first we should change to master branch in order to implement changes. Git will automatically generate a new name "base branch" within the process of merging.
+```
+git checkout master
+git merge [file name]
+```
+
+We can check changes with `cat [file name]` for example.
+
+It is possible that we have conflict between 2 branches, because we have different commit for a new line or new "addition" to our file in two different branches.
+In such situation if we try to do merge between files from those different branches we will get a "clonfict" message from Git.
+To solve this, first we can do is type `git status` in order to figure out what is happening. We'll be prompted to solve the conflicts between additions and do commit again.
+If we now use `cat [file name]`, cat will show us very usefull info:
+```
+<<<<<<<<<<<<<<<HEAD BRANCH
+
+new line in master/base branch file
+===================================
+new line in update branch file
+
+>>>>>>>>>>>>>>>UPDATE BRANCH
+```
+
+So in order to solve the conflict the best thing is erase the addition in the branch we are (master/base), and leave the new in develop branch file.
+After that, with:
+```
+git add -A
+git commit -m "solved conflict"
+```
+We are completing the merge manually, so we don't have to go back to state before `git merge [filename]` command.
+
+There is an opensource book called GitPro to go deeper in the use of git.
+
+# SUMMARY
+
+- Git branching allow us to work with others in the same code base.
+- To create a new branch we use `git branch [branch name]`.
+- To change between branches we use `git checkout [branch name]`.
+- We combine branches and file content using `git mege [branch name]`.
 

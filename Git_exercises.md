@@ -41,3 +41,26 @@ git reset --soft HEAD~
 git add -A
 git commit -m "added files 1 and 2.txt"
 ```
+
+## Git features exercises
+
+1. Look at the man page for git log and git diff
+
+Well as we read through `git help diff/log` pages, it is shown to us many 
+options in wich we can use this commands, much more than I am able to use at the moment.
+
+2. Add a file type to our .gitignore file and add and commit it to be functional.
+
+I did this following the instructions for the topic in course, but for .pdf files:
+```
+echo "*.pdf" > .gitignore
+git add .gitignore
+git commit -m "added pdf to .gitignore"
+```
+3. Create a file that contains the `git log` command output for the repository.
+   Use egrep to see in what day of the week more changes happened.
+
+I did this by the command `$( echo "git log" ) > git_log.txt` to create the file.
+Then I did `cat git_log.txt` and was clear wich was the important day, because there were not many commits. I should use egrep with day of the week names I soupose, but I didn't.
+
+ 
