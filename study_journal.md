@@ -2,7 +2,7 @@
 
 ## Entry 1 Tuesday June 15 2021
 
-## What are Git and GitHub?
+# What are Git and GitHub?
 
 Git is a command line program wich allow us tracking versions of code and 
 text files of our own.
