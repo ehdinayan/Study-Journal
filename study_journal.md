@@ -196,10 +196,40 @@ We are completing the merge manually, so we don't have to go back to state befor
 
 There is an opensource book called GitPro to go deeper in the use of git.
 
-# SUMMARY
+## SUMMARY
 
 - Git branching allow us to work with others in the same code base.
 - To create a new branch we use `git branch [branch name]`.
 - To change between branches we use `git checkout [branch name]`.
 - We combine branches and file content using `git mege [branch name]`.
+
+# Entry 3 Wednesday 23 June 2021
+
+## Week 4 GitHub
+
+Now that we know Git basics we can start see how GitHub works. First we login in the web site with credentials established
+at the beginning of week 4 topics. We should see a + sign on top right side. By click on it we are prompted to create a new repo.
+After that we should be in a new page with new repo's info. That will be a Git remote repository so I think is usefull
+call it the same name than our local repo, or `remote [local repo name]`
+
+With the command `git remote` we can see wich remote GitHub repo is linked to our local repo.
+
+This won't work at the moment because we haven't linked our new GitHub repo yet. To do so, we should copy the url of GitHub repo
+we have just created, and then use a command to assign by default such repo to our local repo:
+
+`git remote add [GitHub repo name] [url]`
+
+After that if we type `git remote` again, we'll see our new GitHub repo set as remote. Ok!
+
+When doing changes in our local files with their adds and commits, we should now update also our remote repository in order to 
+both remain equal. For the first time doing so, we should use the command `git push -u [GitHub repo name] [branch]`.
+The `-u` flag sets that remote repo as default repo, so next time we push changes to GitHub won't be necessary to specify any name or 
+branch. Before push we`ll be asked for our GitHub user and password. Now we can see changes are well done in the web.
+
+One interesting GitHub feature is representation of readme files, wich allow us to use markdown (.md) language for example.
+
+## Markdown
+
+
+
 

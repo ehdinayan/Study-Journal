@@ -64,3 +64,29 @@ I did this by the command `$( echo "git log" ) > git_log.txt` to create the file
 Then I did `cat git_log.txt` and was clear wich was the important day, because there were not many commits. I should use egrep with day of the week names I soupose, but I didn't.
 
  
+## Branching exercises
+
+1. Make a new branch
+
+This should be made with `git branch [branch name]`
+
+2. Change to new branch and do some commits in it. Change again to master branch and do merge.
+
+Ok I made a new branch named update_log to update git_log.txt. I did it by `git branch Update-log`.
+Then I did: 
+```
+git checkout Update-log 
+$( echo "git log" ) > git_log.txt
+git checkout master
+git merge git_log.txt
+```
+To check changes I did `cat git_log.txt`
+
+3. Create a conflict between branches and solve it.
+
+To create the conflict simply update the same file in different branches with different content and add and commit them in each branch.
+Then in the branch in wich I wanted do merge message of conflict arised.
+At this point `git status` and `cat [filename]` are usefull to see what is happening.
+Then proceeding as in topic notes is easy, just leaving changes in update version and erasing modifications in master. 
+Then we can commit as conflit solved and complete merge manually, so to speak.
+
