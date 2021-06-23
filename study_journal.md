@@ -78,7 +78,7 @@ git commit -m "added two files"
 In order to avoid and erase last changes and commits we can type
 `git reset --soft HEAD~`
 
-# Entry 2 Tuesday June 22 2021
+## Entry 2 Tuesday June 22 2021
 
 ## SUMMARY
 
@@ -90,7 +90,7 @@ In order to avoid and erase last changes and commits we can type
 - To see the state of files in directory we use `git status` command.
 - We can see a list of commits of repo by typing `git log`.
 
-# WEEK 4 Important Git features
+# Important Git features
 
 ## Help, Logs and Diffs
 
@@ -137,7 +137,7 @@ After that we can be sure any other jpg file won't be detected by Git.
 - `git diff` show differences between last commit and recent changes not being staged yet.
 - We can create a `.gitignore` file to add files we don't want to be detected by Git. 
 
-# WEEK 4 Branching, part 1
+## Branching, part 1
 
 Branching is one of the most powerfull Git features. We can see branches at the moment by the `git branch` command.
 We'll see the branch we are in marked with a (*) sign.
@@ -156,7 +156,7 @@ If we want to create a new branch and at the same time change to it, we can do w
 It is important to note that when we create a new branch all files in master are also by default in the new branch, but if we do changes to a file in 
 the new one this will not affect the same file in the master branch, even if we have added and commited new changes.
 
-# Branching, part 2
+## Branching, part 2
 
 The branching main idea is to be able to do "incremental changes" to plain text files ( usually code ), without affecting the master branch
 or any other.
@@ -203,9 +203,9 @@ There is an opensource book called GitPro to go deeper in the use of git.
 - To change between branches we use `git checkout [branch name]`.
 - We combine branches and file content using `git mege [branch name]`.
 
-# Entry 3 Wednesday 23 June 2021
+## Entry 3 Wednesday 23 June 2021
 
-## Week 4 GitHub
+# GitHub
 
 Now that we know Git basics we can start see how GitHub works. First we login in the web site with credentials established
 at the beginning of week 4 topics. We should see a + sign on top right side. By click on it we are prompted to create a new repo.
