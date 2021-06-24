@@ -228,8 +228,81 @@ branch. Before push we`ll be asked for our GitHub user and password. Now we can 
 
 One interesting GitHub feature is representation of readme files, wich allow us to use markdown (.md) language for example.
 
+## Entry 4 Thursday 24 June 2021
+
 ## Markdown
 
+Markdown is a markup language wich allows us add decorative features to text files through a set of rules, just as other languages like HTML, XML
+or LaTex. Markup is intuitive and powerfull and can be used as plain text. GitHub transforms markdown text files (.md extension) into simple HTML 
+files. If we have a README.md file in our repo, GitHub will renderize it to HTML.
+We can create and edit this file with nano.
+
+This are the Markdown rules to write .md text files:
+```
+double star quotation (**) = bold
+
+simple star quotation (*)  = cursive
+
+comment with simple #      = big text (tittles)
+
+comment with double ##     = average text (second tittles)
+
+three ``` before and after 
+ an entire pharagraph      = code format
+
+simple ` quotation         = code format
+
+middle hypen comment (-)   = dot (.)
+
+number and dot comment 1.  = 1.
+
+brackets quotation []+(url)= link
+
+link preceeded by !        = image
+```
+
+In course there are links to guides and tools to mastering Markdown.
+
+## Pull request
+
+Forking and pull requests are what make GitHub great. Pull request allow us to compare 2 different branches before doing merge between them.
+This way is easy to decide next course of action.
+
+This feature aloow peopple collaborating in develop their projects, but we can use it individually to be organized.
+Let's see how to open apull request in our repo. First we should change to our develop or update branch:
+
+`git checkout [branch name]`  
+`ls`
+
+let's modify a README file for example, in order to have two different versions in the two branches and have a little Markdown practice.
+When this is done, we should add and commit this changes in our develop branch, and push it to our GitHub remote repo:
+
+`git push [remote repo name] [branch name]`
+
+Git will tell us that a new branch has been created. This is normal since we haven't made any push from our develop branch to our remote repo.
+So then we better check our GitHub site to to confirm we have now two branches with different README files.
+
+Now that we have pushed and update our develop branch in GitHub, letś open a pull request.
+It is similar to a Git Merge guided by GitHub. To do so, we should click on "new pull request button", wich is next to branch selection in GitHub. This
+will take us to a page with important features, so we'll explain them.
+
+Under the last commit there are names of base (master) and compare (develop) branches, this one is where changes had been done.
+We can also give a name to our pull request action or leave for it the last commit name.
+We can also write comments in text boxes about our pull request, if we are in a collaboration project it is important to explain well those changes.
+If we continue scrolling down the page we'll see a usefull comparison between the two files wich has same name but different content, as well as a list of the rest of files contained in each branch.
+So we click on green button "create pull request", and other important page will open.
+
+Under our pull request name there are three tabs: Comments, where we can comment pull request in Markdown format if we wish.
+Commits, where we can see commits to comparison branch for this pull request. Files changed show us a list of changes made to the 
+file in a line by line basis. We now come back to the tab where the green button "merge pull request" is and click on it, 
+then "confirm merge". This will do a merge of the compare branch into master (base) branch. Now if we click on the top left corner in the 
+Code tab, we'll see the changes made to develop branch have been merged into master branch. We have made our first pull request!
+
+Now the important point is update locally in our repo the changes that have been made remotelly through pull request in GitHub.
+To do so, on our local repo we type `git pull`. With this command, Git finds master branch in remote repo and updates our local repo
+with the new pull request commits. We have completed an entire pull request cycle!
+
+## Entry 5  
 
 
 
