@@ -203,7 +203,7 @@ There is an opensource book called GitPro to go deeper in the use of git.
 - To change between branches we use `git checkout [branch name]`.
 - We combine branches and file content using `git mege [branch name]`.
 
-## Entry 3 Wednesday 23 June 2021
+## Entry 3 Wednesday June 23 2021
 
 # GitHub
 
@@ -228,7 +228,7 @@ branch. Before push we`ll be asked for our GitHub user and password. Now we can 
 
 One interesting GitHub feature is representation of readme files, wich allow us to use markdown (.md) language for example.
 
-## Entry 4 Thursday 24 June 2021
+## Entry 4 Thursday June 24 2021
 
 ## Markdown
 
@@ -302,7 +302,47 @@ Now the important point is update locally in our repo the changes that have been
 To do so, on our local repo we type `git pull`. With this command, Git finds master branch in remote repo and updates our local repo
 with the new pull request commits. We have completed an entire pull request cycle!
 
-## Entry 5  
+## Entry 5 Friday June 25 2021 
 
+## GitHub Pages
 
+We can create and have a web host a website through GitHub using Git and Markdown.
+In our GitHub session, we can click on **Settings** button on top right area and that take us to another page where we have considerable number of options to manage for our repository.
+If scrolling down we'll see **Pages** option on the left. Click on it and then other page appears. We can select the branch and file we want to show as web page in this repository.
+There are also other options like theme to choose and so, but we are only interested for now in simple Markdown .md files to show as website.
+
+After do the selections, we press **save** button and that will show an url link where our site will be hosted. Next time we enter this option we can click that link in order to see how it looks. Quite a cool thing!
+To modify the aspect, we should modify the .md file and commit and push the changes to our remote repo.
+
+This is great for project descriptions, documentation, blogs, etc.
+
+There's a link in the course to go deeper on GitHub Pages.
+
+## Forking
+
+When we do a **fork** of a repository we are copying that Git filesystem to our repo. This way we can modify this copy and save changes for personal use, to share them,
+or to open a pull request to merge our changes with original file, wich is in what is known as **upstream repository**.
+
+Once we have forked a repo, we should use `git clone` command in order to have a local copy while Git follows **upstream repo**.
+In repository we have just forked there should be a button on top right area wich says **clone or download**. If we click on clone we'll see the url that has been forked, so we should copy it in order to use in our terminal. We go to our local Git repo and type:
+
+`git clone [forked repo url]`
+
+Now that we have clone our first repo, it is cool be sure that Git is following its **upstream repo**, so we can do that by typing:
+
+`git remote -v`
+
+We can now easily modify the file we were interested in, add, commit, push and to complete the **forking cycle**, a pull request to do merge with original file will be great.
+We have gone through this by forking course repo, cloning it, add our name in the guestbook.md, add and commit this changes and do a pull request.
+
+## SUMMARY
+
+- GitHub creates and mantains remote repos.
+- A Git remote repo is allways connected to the internet.
+- We can see remote repos with `git remote` command. 
+- We add a remote repo with `git remote add [repo name] [url]`.
+- We add commits to our remote repo with `push` command if we have set a default remote repo with `-u` flag in `push` command.
+- Pull Request allow us compare two branches before doing a **merge** between them.
+- We can have a free website with GitHub and Markdown.
+- Forking allow us to make changes in a public repository. Then we can try to do a pull request if consider will be great merge with original file in **upstream repo**.
 
