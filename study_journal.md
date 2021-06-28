@@ -268,7 +268,7 @@ In course there are links to guides and tools to mastering Markdown.
 Forking and pull requests are what make GitHub great. Pull request allow us to compare 2 different branches before doing merge between them.
 This way is easy to decide next course of action.
 
-This feature aloow peopple collaborating in develop their projects, but we can use it individually to be organized.
+This feature allow peopple collaborating in develop their projects, but we can use it individually to be organized.
 Let's see how to open apull request in our repo. First we should change to our develop or update branch:
 
 `git checkout [branch name]`  
