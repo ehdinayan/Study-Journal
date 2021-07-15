@@ -346,3 +346,77 @@ We have gone through this by forking course repo, cloning it, add our name in th
 - We can have a free website with GitHub and Markdown.
 - Forking allow us to make changes in a public repository. Then we can try to do a pull request if consider will be great merge with original file in **upstream repo**.
 
+## Entry 6 Thursday July 15th
+
+# NEPHOLOGY
+
+## Introduction to cloud computing
+
+Nephology is the study of clouds. A cloud in technology speaking is just a computer 
+wich we can access through the net.
+
+We can achieve a "cloud computer" through a link wich is shared in course and is from Digital Ocean.
+With this link we'll be able to have a 2 free months cloud computer called "droplet" in terms of the company.
+
+Well it costs me 5 dollars and I already had closed it cause finished course, but it is great 
+to learn and use such commands as scp or ssh.
+
+Once we have created our droplet, we can start doing cloud operations.
+
+## Connecting to the cloud
+
+We can use ssh ( *secure shell* ) to access a cloud computer from its IP adress.
+this should be the syntax:
+ 
+`ssh [username]@[ip adress}`
+
+This info is available from Digital Ocean and we only had to complete the syntax.
+Then, we 'll be ready to operate the server ( *Important select the same OS as we have when creating the droplet* ).
+
+## SUMMARY
+
+ssh connects us to cloud computer. The syntax is ssh `[root]@[ip adress].`
+To logout from server it is as easy as type `logout.`  
+
+## Moving Files In and Out the Cloud
+
+Now that we have a cloud computer we can move some files to and from it. To do so,
+we'll be using scp program.
+
+First, we enter our cloud server with the help of ssh and create a file there:
+
+`ssh root@[ip adress].` Then `mkdir Files for example`, and inside this directory
+`echo "from the server" > server_file.txt`
+
+So now we have created a file in our server called server_file.txt. The practice consist on take a copy from there to our local machine. So let's type logout and start using scp program.
+
+The syntax we should be using is:
+
+´scp root@[ip adress]:path/server/file path/local/dir`
+
+In order to copy entire folders, we should be using the -r flag with scp.
+
+When we want copy files from local to cloud, the syntax would be in this case:
+
+`scp /local/file/path root@[ip adress]:server/file/path`
+
+## Talking to other severs
+
+The most popular program to talk other servers is curl. We can use this program to download network files available.
+It is easy if we have the url to file, by using the following syntax:
+
+`curl -O (*this flag means download to working dir with same name*) [url]`
+
+One of the most-common use of curl is to communicate with APIS (*Application programming interface*), 
+wich are a few set of rules to communicate with programs and servers on the net.
+
+GitHub has a big Api to find many information about lot of things. Let's try some example:
+
+
+
+
+
+
+
+
+
