@@ -410,7 +410,98 @@ It is easy if we have the url to file, by using the following syntax:
 One of the most-common use of curl is to communicate with APIS (*Application programming interface*), 
 wich are a few set of rules to communicate with programs and servers on the net.
 
-GitHub has a big Api to find many information about lot of things. Let's try some example:
+## Entry 7 Friday 16 July 2021
+
+GitHub has a big Api to find many information about lot of things. Let's try some example.
+We'll find my Cloud-exercises from Unix Workbench course repo laguages:
+
+```
+curl https://api.github.com/repos/ehdinayan/Cloud-exercises/languages
+{
+  "Shell": 2266
+}
+```
+As we see, the Api is located in `https://api.github.com.` The rest of the direction acts like an argument. I was interested in my own repository languages.
+When we use curl without any option is the same as send a httml verb ( GET ), wich is a http request wich is the most used technology to share info through the net.
+Something similar to telling someone where do you live and request him if he would like to send you info about his house.
+
+Let's send a GET to another IP adress:
+
+```
+curl https://httpbin.org/get
+{
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.76.1", 
+    "X-Amzn-Trace-Id": "Root=1-xxxxxxxx-414939246e67ee1b1907b516"
+  }, 
+  "origin": "95.19.67.238", 
+  "url": "https://httpbin.org/get"
+}
+```
+
+## Entry 8 Saturday 17 July 2021
+
+Inside the text above we have following information groups:
+
+- Args
+- Headers
+- Origin
+- Url
+- **Amazon Trace Id** I'm not sure what it does but I have not oredered it. I want to believe it is from site's Api, not from my local computer.
+
+**origin** shows our own ip and **url** is the site we did the request to.
+**Headers** shows info about program used to do the request, and **args** in this case is empty. Usually we can introduce 
+commands to an Api by adding an interrogation sign ( ? ) after url:
+
+```
+curl http://httpbin.org/get?Baltimore
+
+{
+  "args": {
+    "Baltimore": ""
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.76.1", 
+    "X-Amzn-Trace-Id": "Root=1-xxxxxxx-74d3691d03a7bbcf0c195a18"
+  }, 
+  "origin": "95.19.67.238", 
+  "url": "http://httpbin.org/get?Baltimore"
+}
+```
+To most Apis we have to give names to our arguments, contrary to most of our arguments in bash.
+To do so we use = sign: 
+
+```
+curl http://httpbin.org/get?city=Baltimore
+  
+{
+  "args": {
+    "city": "Baltimore"
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/7.76.1", 
+    "X-Amzn-Trace-Id": "Root=1-xxxxxxxx-4136b66015afa8ab19e6ed89"
+  }, 
+  "origin": "95.19.67.238", 
+  "url": "http://httpbin.org/get?city=Baltimore"
+}
+[2]+  Hecho                   curl http://httpbin.org/get?city=Baltimore
+```
+As we can see now the command we designed appears to be noted by the server's Api,
+but without any conequences because thre is not any programmed response in there I guess, maybe I'm wrong.
+
+If we were programming an Api server, we could introduce some commands to do different things with HTTP requests.
+Anything we can imagine or something related with our web site if it is allowed in there also.
+
+## Automating Tasks ( Cron ).
+
 
 
 
