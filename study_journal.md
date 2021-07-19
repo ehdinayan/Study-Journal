@@ -385,7 +385,7 @@ we'll be using scp program.
 
 First, we enter our cloud server with the help of ssh and create a file there:
 
-`ssh root@[ip adress].` Then `mkdir Files for example`, and inside this directory
+`ssh root@[ip adress].` Then `mkdir Files for example`, and inside this directory:
 `echo "from the server" > server_file.txt`
 
 So now we have created a file in our server called server_file.txt. The practice consist on take a copy from there to our local machine. So let's type logout and start using scp program.
@@ -495,19 +495,72 @@ curl http://httpbin.org/get?city=Baltimore
 [2]+  Hecho                   curl http://httpbin.org/get?city=Baltimore
 ```
 As we can see now the command we designed appears to be noted by the server's Api,
-but without any conequences because thre is not any programmed response in there I guess, maybe I'm wrong.
+but without any conequences because there is not any programmed response in there I guess, maybe I'm wrong.
 
 If we were programming an Api server, we could introduce some commands to do different things with HTTP requests.
 Anything we can imagine or something related with our web site if it is allowed in there also.
 
+## Entry 9 Monday 19 July 2021
+
 ## Automating Tasks ( Cron ).
 
+If server should be allways connected to the internet maybe will be useful to be able of schedule some tasks.
+We can do it with a program named cron, wich is a system daemon that usually runs on 2nd term. It is able to manage other programs.
 
+We go enter to our droplet: `ssh root@[ipadress`
+Once we are in server command line, we can type the following command to know if cron is running any program:
 
+```
+ps -A | grep "cron"
 
+   877 ?        00:00:00 cron
+```
 
+So here we have 4 columns wich are **process PID, TTY, TIME, COMMAND.**
+It appears like cron is not executing anything at the moment.
 
+Scheduling program executions through cron have to be done using the **crontab**, a table where we can determine the exact moment or frecuency we want any task to be done or command to be executed.
+The command we should enter to start config this table is `crontab -e.` First time we do this an editor selection will be necessary. I use nano.
 
+The file contains enough explanations, basically we can introduce data under columns especified at the end line of file, here a few instructions from crontab man page:
 
+```
+NAME
+       crontab - maintain crontab files for individual users 
+
+SYNOPSIS
+       crontab [ -u user ] file
+```
+
+ Columns are:
+
+```
+MINUTE(m) HOUR(h) DAY OF MONTH(dom) MONTH(mon) DAY OF WEEK(dow) COMMAND 
+
+A popular example is scheduling a backup using this table, that should be done in this way:
+
+`0 5 * * 1 tar -zcf /var/backups/home.tgz /home`
+
+What we are doing here is programming all user acounts backup every Monday at 5 am
+
+We have to be clear on each column's  values:
+
+- MINUTE 00-59
+- HOUR   00-23
+- DOM    01-31
+- MONTH  01-12
+- DOW    00-06 (0 stands for Sunday)
+
+The star (*) is validating all possible values on that column (every).
+We also can use hyphens (-) and commas (,) to specify ranges or lists in a column.
+For example, 00-29 in MINUTE column means every minute from 0 to 29. 1,5 in DOW column means Monday and Friday.
+
+## SUMMARY
+
+- scp copies files between cloud computer and personal computer or vice versa.
+- curl allow us sen http request to server url and download files with -O flag.
+- ps -A command shows all background processes in our computer.
+- cron allow us programming tasks to be done automatically. We use `crontab -e` command to acces cron table.
+- ssh [user]@[ip adress] connects us with our remote server.
 
 
