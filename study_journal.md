@@ -539,8 +539,9 @@ MINUTE(m) HOUR(h) DAY OF MONTH(dom) MONTH(mon) DAY OF WEEK(dow) COMMAND
 
 A popular example is scheduling a backup using this table, that should be done in this way:
 
-`0 5 * * 1 tar -zcf /var/backups/home.tgz /home`
+0 5 * * 1 tar -zcf /var/backups/home.tgz /home
 
+```
 What we are doing here is programming all user acounts backup every Monday at 5 am
 
 We have to be clear on each column's  values:
