@@ -559,9 +559,15 @@ For example, 00-29 in MINUTE column means every minute from 0 to 29. 1,5 in DOW 
 ## SUMMARY
 
 - scp copies files between cloud computer and personal computer or vice versa.
-- curl allow us sen http request to server url and download files with -O flag.
+- curl allow us send http request to server url and download files with -O flag.
 - ps -A command shows all background processes in our computer.
 - cron allow us programming tasks to be done automatically. We use `crontab -e` command to acces cron table.
 - ssh [user]@[ip adress] connects us with our remote server.
+
+## END NOTE
+
+## *This can be considered the end of the file, I'll be working in new ideas...see you!*
+
+
 
 

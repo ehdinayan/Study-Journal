@@ -2,7 +2,7 @@
 
 **Write a bash script that takes a file path as an argument and copies that file to a designated folder on your server.**
 
-Well we have seen how scp is the command to mv files between local and cloud computers. I leave [here](https://github.com/ehdinayan/Cloud-exercises/tree/master/Exercise_1)
+Well we have seen how scp is the command to move files between local and cloud computers. I leave [here](https://github.com/ehdinayan/Cloud-exercises/tree/master/Exercise_1)
 the link to this practice wich is in individual repository.
 
 ## Exercise 2:
