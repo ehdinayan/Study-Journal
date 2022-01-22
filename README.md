@@ -1,4 +1,4 @@
-# Hey world that's a cool thing and I am a cool man!
+# Hey world that's a cool thing!
 
 ``` 
 I would like to say The Unix Workbench is quite struggling course
@@ -7,11 +7,12 @@ to learn Linux computing with the help of great mentors and other
 cool peopple like me.
 
 ```
-## Now I would like to share a link to a [song](https://soundcloud.com/user-878978370/ladridos-de-amor-edicion)
+## Now I would like to share a link to a [song](https://www.youtube.com/watch?v=LWdhufzxQRA&list=PLvNp0Boas721Im_ZBhvDEuCqzLsRvlKb3&index=2)
 
-It was made about two years ago with a neighbor and dedicated to our dogs Pancho and Choco.
+## cool videogame & music from the 90's 
 
-## Other thing I can do is share a photo of mine so everyone can see how cool I am
+
+## Other thing I can do is share a photo of mine to practice how it is done
 
 - Damn it! first I should push a photo to github in order to have an url 
 to fit in the file XD
