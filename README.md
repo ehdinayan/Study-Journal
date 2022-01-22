@@ -9,7 +9,7 @@ cool peopple like me.
 ```
 ## Now I would like to share a link to a [song](https://www.youtube.com/watch?v=LWdhufzxQRA&list=PLvNp0Boas721Im_ZBhvDEuCqzLsRvlKb3&index=2)
 
-## cool videogame & music from the 90's 
+## That was cool videogame & music from the 90's!
 
 
 ## Other thing I can do is share a photo of mine to practice how it is done
